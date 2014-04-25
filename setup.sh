@@ -1,6 +1,6 @@
 #!/bin/bash
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
-# for headless setup. 
+# Special thanks to coursera start up engineering course for the inspiration for this script
 
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
