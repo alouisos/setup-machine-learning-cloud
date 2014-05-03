@@ -51,7 +51,10 @@ rm -rf setup
 rm setup_server.sh 
 
 
+# add screen to protect long octave building from sudden connection interruption. 
+# if you lose connection to the server then reconnect and type screen -r to resume the screen of octave building 
 wget ftp://ftp.gnu.org/gnu/octave/octave-3.8.0.tar.bz2
+screen 
 tar -xvf octave-3.8.0.tar.bz2
 cd octave-3.8.0
 sudo apt-get build-dep octave
