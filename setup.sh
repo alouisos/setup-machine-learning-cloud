@@ -41,9 +41,9 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
-sudo apt-get install apache2
+sudo apt-get install -y apache2 
 
-sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
+sudo apt-get install -y mysql-server libapache2-mod-auth-mysql php5-mysql
 sudo mysql_install_db
 sudo mysql_secure_installation
 
@@ -57,14 +57,20 @@ wget ftp://ftp.gnu.org/gnu/octave/octave-3.8.0.tar.bz2
 screen 
 tar -xvf octave-3.8.0.tar.bz2
 cd octave-3.8.0
-sudo apt-get build-dep octave
+sudo apt-get build-dep octave -y 
 ./configure
 make
 sudo make install
 
-sudo apt-get install octave-statistics
-sudo apt-get istall octave-io
- 
+sudo apt-get install octave-statistics -y 
+sudo apt-get istall octave-io -y 
+
+#install sci-py num-py and pandas thanks to Ippei from CambridgeEnergyDataLab for the Idea 
+sudo apt-get install python-numpy -y 
+sudo apt-get install cython -y 
+sudo apt-get install python-pandas -y
+
+
 
 cd ~
 rm octave-3.8.0.tar.bz2
